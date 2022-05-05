@@ -1,0 +1,28 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Log In</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="login">
+			<div id="loginForm">
+				{{#if msg}}
+ 			<p class="msg">{{msg}}</p>
+		{{/if}}
+		    <h2 class="loginlink"><a href="/login"> Sign In </a> </h2>
+            <h2 class= "registerlink"><a href="/register"> Sign Up </a> </h2>
+		<form action="/login" method="post">
+	  <input type="text" id="login" class="loginInput" name="user" placeholder="login">
+      <input type="password" id="password" class="passInput" name="pass" placeholder="password">
+      <input type="submit" class="submitLogin" value="Log In">
+	</form>
+			</div>
+		</div>
+	</body>
+</html>

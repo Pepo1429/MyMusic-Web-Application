@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+body {
+  background-color: rgb(209, 255, 216);
+
+  font-family: 'Quicksand', sans-serif;
+
+   
+  }
+  
+  .msg {
+    font-weight: bold;
+    color: red;
+    padding: 1em;
+  }
+  
+  .img {
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+  .nav{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    background-color: #444;
+    text-align: center;
+    font-size: 10px;
+  }
+  .logo {
+    position: relative;
+    float: left;
+    left: 10px;
+    width: 10%;
+    height: 100%;
+    top:15px;
+    object-fit: contain;
+}
+.menu{
+  width:60%;
+  position: relative;
+  left: 40%;
+}
+   .menu li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    line-height: 30px;
+    height: 40px;
+    border-bottom: 1px solid #888;
+  }
+   
+   .menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: .3s background-color;
+  }
+   
+  .menu a:hover {
+    background-color: #c20000;
+  }
+   
+  .menu a.active {
+    background-color: #fff;
+    color: #444;
+    cursor: default;
+  }
+
+  .content{
+    position: relative;
+    top:50px;
+    width: 72%;
+  }
+
+  .musicContent {
+    position: relative;
+    padding-right: 3%;
+    right: -4%;
+    width: max-content;
+    margin: 2px;
+    margin-bottom: 16px;
+    float: left;
+    bottom: 20%;
+}
+
+.musicContent1 {
+  position: relative;
+    padding-right: 3%;
+    right: -4%;
+    width: max-content;
+    margin: 2px;
+    margin-bottom: 16px;
+    float: left;
+    height: 280px;
+    bottom: 20%;
+}
+
+  .ContentMusic {
+    position: relative;
+    margin: 0px;
+    bottom: 9%;
+    float: left;
+}
+
+.ContentMusic1 {
+  position: relative;
+  margin: 0px;
+  bottom: 0%;
+  float: left;
+  width: 100%;
+}
+
+.inputFields{
+  position: relative;
+  width: 33%;
+  left: 5%;
+  top: 60px;
+}
+
+#fit{
+  position: relative;
+  top:10%;
+  clear: left;
+}
+
+#commentForm{
+  float:left; 
+}
+  .img{
+    position: relative;
+    float: left;
+    left: 25%;
+    display: grid;
+    margin-left: 30px;
+  }
+
+  .img a{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+  }
+  
+  
+
+  .img .button1{
+    position: relative;
+    float: right;
+    border: none;
+    border-radius: 0;
+    padding-top: 0%;
+    height: 50;
+    left: 10%;
+    bottom: 6%;
+    width: 100%;
+    background-color: #555;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.img .button1:hover {
+  background-color: #c20000;
+}
+
+.img .button1:active {
+  background-color: black;
+}
+
+
+
+
+   
+  @media screen and (min-width: 600px) {
+    .nav .menu li {
+      width: 120px;
+      border-bottom: none;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.4em;
+    }
+   
+    .nav .menu li {
+      display: inline-block;
+      margin-right: -4px;
+    }
+   
+    
+  }
+
+  .login,.register {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+  .upload, .playlistContent{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 10%;
+  }
+
+  .fChooser select{
+    position: relative;
+      margin-bottom: 1em;
+      padding: .25em;
+      border: 0;
+      border-bottom: 2px solid currentcolor; 
+      font-weight: bold;
+      width: 35%;
+      letter-spacing: .15em;
+      border-radius: 0; 
+  }
+
+  .fChooser a{
+    position: relative;
+    top:10px;
+    right:6%
+
+  }
+
+  .RChooser select{
+    position: relative;
+    margin-bottom: 1em;
+    padding: .25em;
+    border: 0;
+    left: 2%;
+    border-bottom: 2px solid currentcolor;
+    font-weight: bold;
+    width: 38%;
+    letter-spacing: .15em;
+    border-radius: 0;
+  }
+
+  .RChooser a{
+    position: relative;
+    top:10px;
+    right:6%
+  }
+  .commentInput{
+    position: relative;
+    left:9%;
+  }
+  .buttonComment{
+    position: relative;
+    left: 0%;
+    width: 41%;
+  }
+  .commentLabel{
+    position: relative;
+    right:6%;
+  }
+
+  select:focus, select:active {
+    outline: 0;
+    border-bottom-color: red;
+  }
+
+  #loginForm a,#regForm a{
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  #loginForm,#regForm,#playlistForm,#uploadForm {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+  }
+
+  #musicForm {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 14px;
+    width: 100%;
+    display: table-caption;
+    height: -4%;
+    max-width: 450px;
+    position: relative;
+    padding: 4px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+  }
+
+  #musicForm1 {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 14px;
+    width: 100%;
+    display: table-caption;
+    height: -4%;
+    max-width: 450px;
+    position: relative;
+    padding: 4px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+  }
+
+  #commentForm {
+    position: relative;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 0px 15px 15px 0px;
+    border-style: solid;
+    background: #ffffff;
+    padding: 14px;
+    width: 100%;
+    height: -4%;
+    max-width: 450px;
+    position: relative;
+    top: 0%;
+    padding: 4px;
+    margin-bottom: 5%;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+  .commentContent{
+    position: relative;
+    display: block;
+    width: 30%;
+    float: left;
+    left: 4%;
+    top: 60px;
+  }
+
+  .commentContent1{
+    position: relative;
+    display: block;
+    width: 30%;
+    left: 4%;
+    top: 60px;
+    clear:left;
+  }
+
+  #commentForm1 {
+    position: relative;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 0px 15px 15px 0px;
+    border-style: solid;
+    background: #ffffff;
+    padding: 14px;
+    width: 100%;
+    height: -4%;
+    max-width: 450px;
+    position: relative;
+    top: 0%;
+    padding: 4px;
+    margin-bottom: 5%;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+
+  #commentForm  p{
+    position: relative;
+    color: #c20000;
+    left: 5%;
+    bottom: 30px;
+    width: 86%;
+    height: auto;
+  }
+  
+  #commentForm1 p{
+    position: relative;
+    color: #c20000;
+    left: 5%;
+    bottom: 30px;
+    width: 86%;
+    height: auto;
+  }
+  #commentForm h3{
+    position: relative;
+    bottom: 20px;
+  }
+
+  #commentForm1 h3{
+    position: relative;
+    bottom: 20px;
+  }
+
+  #commentForm h4{
+    position: relative;
+    float: right;
+    bottom: 80px;
+  }
+  #commentForm1 h4{
+    position: relative;
+    float: right;
+    bottom: 80px;
+  }
+
+  .rating a{
+    color:goldenrod;
+  }
+
+  .playList a{
+    color:#c20000;
+  }
+   
+  h2.inactive {
+    color: #cccccc;
+  }
+  h2:hover{
+    color:#c20000
+  }
+    
+  input[type=button], input[type=submit], input[type=reset]  {
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+  }
+  
+  input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+    background-color: #c20000;
+    cursor: pointer;
+  }
+  
+  
+  input[type=text],input[type=password]{
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+  }
+  
+  input[type=text],input[type=password]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #555;
+  }
+  
+  input[type=text],input[type=password]:placeholder {
+    color: #cccccc;
+  }
+  
+  
+  @-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  
+  
+  .underlineHover:hover {
+    color: #c20000;
+  }
+  
+  .underlineHover:hover:after{
+    width: 100%;
+  }
+    
+  *:focus {
+      outline: none;
+  } 
+  
+  #icon {
+    width:60%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  

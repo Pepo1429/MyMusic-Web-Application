@@ -1,0 +1,40 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Log In</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+		<div class="nav">
+		<div>
+			<a href="/"><img src="/logo/logo3.png" width="82" height="86" class="logo"></a>
+		</div>
+		<div class="menu">
+		<ul>
+		<li class="myprofile"><a href="/">My Music</a></li>
+		<li class="uploadmusic"><a href="/upload">Upload Music</a></li>
+		<li class="playlist"><a href="/playlist">Add Playlist</a></li>
+		<li class="allplaylists"><a href="/allPlaylists">Online Playlists</a></li>
+		<li class="logout"><a href="/logout">Logout</a></li>
+		</ul>
+		</div>
+		</div>
+		</header>
+		<div class="playlistContent">
+		<div id="playlistForm">
+		<h1>Create Playlist</h1>
+		<form action="/playlist"  enctype="multipart/form-data" method="post">
+            <p>Playlist name<input type="text" name="playlist" placeholder="enter" value=""></p>
+			<p>Upload Image:<input type="file"name="image"></p>
+			<p><input type="submit" value="Upload"></p>
+		</form>
+		</div>
+		</div>
+	</body>
+</html>

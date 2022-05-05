@@ -1,0 +1,66 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+	<header>
+		<div class="nav">
+		<div>
+			<a href="/"><img src="/logo/logo3.png" width="82" height="86" class="logo"></a>
+		</div>
+		<div class="menu">
+		<ul>
+		<li class="myprofile"><a href="/">My Music</a></li>
+		<li class="uploadmusic"><a href="/upload">Upload Music</a></li>
+		<li class="playlist"><a href="/playlist">Add Playlist</a></li>
+		<li class="allplaylists"><a href="/allPlaylists">Online Playlists</a></li>
+		<li class="logout"><a href="/logout">Logout</a></li>
+		</ul>
+		</div>
+		</div>
+		</header>
+		<div class="playList">
+		<h1>Playlist: <a>{{playlist}}</a></h1> 
+		</div>
+		<div class="rating">
+		<h1>Rating: <a>{{rate}}</a> stars</h1>
+		</div>
+		<div class="ContentMusic1">
+		 {{#each result}}
+		 <div class="musicContent1">
+		<div id="musicForm">
+		<p>{{this.name}}</p>
+		<a><audio controls>
+		<source src={{this.path}} type="audio/mpeg">
+	   </audio></a>
+	   <ul>
+		   <li>Album: {{this.album}}</li>
+		   <li>Year: {{this.year}}</li>
+		   <li>Publisher: {{this.publisher}}</li>
+		   <li>Artist: {{this.artist}}</li>
+		   <li>genre: {{this.genre}}</li>
+		</ul>
+		</div>
+		</div>
+	    {{/each}}
+		</div>
+		<div class="commentContent1">
+			<h2>Comments:</h2>
+		{{#each comment}}
+		<div id="commentForm1">
+			<h3>{{userName}}:</h3>
+			 <h4>{{date}}</h4>  
+			<p>{{comment}}</p>
+			</div>
+			{{/each}}
+		</div>
+		</body>
+
+</html>

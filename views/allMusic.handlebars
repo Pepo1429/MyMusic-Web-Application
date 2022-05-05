@@ -1,0 +1,91 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+		<div class="nav">
+		<div>
+			<a href="/"><img src="/logo/logo3.png" width="82" height="86" class="logo"></a>
+		</div>
+		<div class="menu">
+		<ul>
+		<li class="myprofile"><a href="/">My Music</a></li>
+		<li class="uploadmusic"><a href="/upload">Upload Music</a></li>
+		<li class="playlist"><a href="/playlist">Add Playlist</a></li>
+		<li class="allplaylists"><a href="/allPlaylists">Online Playlists</a></li>
+		<li class="logout"><a href="/logout">Logout</a></li>
+		</ul>
+		</div>
+		</div>
+		</header>
+		<div id="allMusic">
+		<div class="playList">
+		<h1>Playlist: <a>{{userInfo.data}}</a></h1> 
+		</div>
+		<div class="rating">
+		<h1>Rating: <a>{{score}}</a> stars</h1>
+		</div>
+		 {{#each result}}
+		 <div class="musicContent">
+		<div id="musicForm">
+		<p>{{this.name}}</p>
+		<a><audio controls>
+		<source src={{this.path}} type="audio/mpeg">
+	   </audio></a>
+	   <ul>
+		   <li>Album: {{this.album}}</li>
+		   <li>Year: {{this.year}}</li>
+		   <li>Publisher: {{this.publisher}}</li>
+		   <li>Artist: {{this.artist}}</li>
+		   <li>Language: {{this.lang}}</li>
+		   <li>Text: {{this.text}}</li>
+		</ul>
+		</div>
+		</div>
+	    {{/each}}
+		<div id="fit">
+		<div class="inputFields">
+        <form action="/rate" enctype="multipart/form-data" method="post">
+		<div class="RChooser">
+		  <a>Rate:  <select class="rate" name ='rate'></a>
+                 <option name="1" value="1">1</option>
+                 <option name="2" value="2">2</option>
+                 <option name="3"value="3">3</option>
+                 <option name="4"value="4">4</option>
+                 <option name="5"value="5">5</option>
+            </select>
+			</div>
+			<input type="hidden" name="playlist" value={{userInfo.data}}>
+			<input type="hidden" name="user" value={{userInfo.userid}}>
+			<p><input type='submit' name="rate" value='Rate'></p>
+		</form>
+		<form action="/comment" enctype="multipart/form-data" method="post">
+		<input type="hidden" name="playlist" value={{userInfo.data}}>
+		<input type="hidden" name="user" value={{userInfo.userid}}>
+		<p class="commentLabel" >Comment: <input type="text" name="comment" size="50px" value=""></p>
+	         <p><input class="buttonComment"  type='submit' value='Comment'></p>
+		</form>
+		</div>
+		</div>
+		<div class="commentContent">
+			<h2>Comments:</h2>
+		{{#each comment}}
+		<div id="commentForm">
+			<h3>{{userName}}:</h3>
+			 <h4>{{date}}</h4>  
+			<p>{{comment}}</p>
+			</div>
+			{{/each}}
+		</div>
+		</div>
+		</body>
+
+</html>

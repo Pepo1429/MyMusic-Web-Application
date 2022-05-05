@@ -1,0 +1,44 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+		<div class="nav">
+		<div>
+			<a href="/"><img src="/logo/logo3.png" width="82" height="86" class="logo"></a>
+		</div>
+		<div class="menu">
+		<ul>
+		<li class="myprofile"><a href="/">My Music</a></li>
+		<li class="uploadmusic"><a href="/upload">Upload Music</a></li>
+		<li class="playlist"><a href="/playlist">Add Playlist</a></li>
+		<li class="allplaylists"><a href="/allPlaylists">Online Playlists</a></li>
+		<li class="logout"><a href="/logout">Logout</a></li>
+		</ul>
+		</div>
+		</div>
+		</header>
+		<h1>Online Playlists</h1>
+		<div class="content">
+		{{#each result}}
+		<div class="img">
+		<a>User: {{this.userName}}</a>
+		<img src={{this.accessSrc}} alt="Playlist image" style="width:200px;height:200px;object-fit: cover;"/>
+		<form action="/allMusic" method="get" id="playlist">
+		<input type="hidden" name="playlist" value={{this.title}}>
+		<input type="hidden" name="user" value={{this.userID}}>
+		<input class="button1" type="submit" value={{this.title}}>
+		</form>
+		 </div>
+	  {{/each}}
+		</body>
+
+</html>
